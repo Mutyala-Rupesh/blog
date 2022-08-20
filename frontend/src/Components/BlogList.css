@@ -1,0 +1,48 @@
+.blog-item{
+    width: 100%;
+    height: 200px;
+    background-color: #212529;
+    margin: 50px;
+    border-radius: 15px;
+    color: white;
+}
+
+.blog-item-header{
+    display: flex;
+    justify-content: space-between;
+    font-size: larger;
+}
+
+.title{
+   margin:40px auto;
+   height: 10px;
+   /* color: red; */
+}
+
+.author_name{
+    margin-left: 10px;
+}
+
+.des{
+    text-align: center;
+    word-wrap: break-word;
+    color: rgb(250, 181, 181);
+    font-size: medium;
+}
+
+
+
+.blog-item-footer{
+    display: flex;
+    justify-content: space-between;
+    font-size: smaller;
+}
+
+.des-div{
+    height: 120px;
+}
+
+.button{
+    border: none;
+    border-radius: 10px;
+}

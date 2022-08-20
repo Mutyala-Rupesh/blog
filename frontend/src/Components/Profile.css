@@ -1,0 +1,34 @@
+img {
+    width: 90%;
+    height: 95%;
+    border-radius: 1000px;
+  }
+  
+  .bg-black {
+    background: #000;
+  }
+  
+  .skill-block {
+    width: 30%;
+  }
+
+  .blog-list-user{
+    max-width: 80%;
+    margin: 20px auto;
+  }
+  
+  @media (min-width: 991px) and (max-width:1200px) {
+    .skill-block {
+      padding: 32px !important;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .skill-block {
+      padding: 56px !important;
+    }
+  }
+  
+  body {
+    background-color: white;
+  }

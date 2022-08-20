@@ -1,0 +1,12 @@
+.bloglist{
+  justify-content: space-between;
+  max-width: 60%;
+  /* margin: 0px auto; */
+  margin-left: 50px;
+}
+
+.search{
+  position: absolute;
+  top: 80px;
+  right: 200px;
+}
