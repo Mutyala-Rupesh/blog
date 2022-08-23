@@ -4,6 +4,11 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   post "adduser" , to: "adduser#add" 
+  
+  put "adduser/:username" , to: "adduser#edituser"
+  delete "adduser/:username" , to: "adduser#deleteuser"
+
+
   get "user/:username" , to: "user#show_user_info"
   get "user/bloglist/:username" , to: "user#showblogs"
 

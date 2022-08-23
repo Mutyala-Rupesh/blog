@@ -10,14 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_19_095829) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_22_083013) do
   create_table "blogs", force: :cascade do |t|
     t.string "authorID", null: false
     t.string "title", null: false
     t.text "blog_d", null: false
-    t.binary "blog_image"
+    t.string "blog_image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "short_des"
   end
 
   create_table "users", primary_key: "username", id: :string, force: :cascade do |t|
@@ -27,7 +28,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_19_095829) do
     t.string "password_digest", null: false
     t.integer "age", null: false
     t.string "description"
-    t.binary "image"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

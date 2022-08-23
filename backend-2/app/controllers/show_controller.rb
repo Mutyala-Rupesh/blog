@@ -14,7 +14,7 @@ class ShowController < ActionController::Base
     def blog_id
         b=Blog.find(params[:blogid])
         u=User.find(b.authorID)
-        k={"title":b.title , "blog_d":b.blog_d , "author":u.first_name }
+        k={"title":b.title , "blog_d":b.blog_d , "author":u.first_name , "short_des":b.short_des , "blog_image":b.blog_image}
         render :json => k
     end
 end

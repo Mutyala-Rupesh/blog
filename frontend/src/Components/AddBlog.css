@@ -2,3 +2,11 @@
     display: flex;
     justify-content: space-between;
 }
+
+.add-blog-form{
+    position: relative;
+    /* right: 30px; */
+    margin-top: 25px;
+    margin-right: -140px;
+    width: 400px;
+}

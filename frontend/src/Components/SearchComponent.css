@@ -1,6 +1,6 @@
 .blog-item-search{
     width: 80%;
-    height: 200px;
+    height: 300px;
     background-color: #212529;
     margin: 50px;
     border-radius: 15px;
@@ -11,6 +11,10 @@
     display: flex;
     justify-content: space-between;
     font-size: larger;
+}
+
+.blog-item-content{
+    max-width: 90%;
 }
 
 .title-search{
@@ -44,4 +48,9 @@
 .button-search{
     border: none;
     border-radius: 10px;
+}
+
+.back-icon{
+    width: 40px;
+    margin: 30px;
 }

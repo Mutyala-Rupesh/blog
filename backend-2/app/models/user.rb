@@ -4,7 +4,7 @@ class User < ApplicationRecord
     class_name: 'Blog',
     foreign_key: 'authorID',
     inverse_of: :user,
-    dependent: :destroy)
+)
 
     has_secure_password
 end

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import './Signup.css';
 import axios from "axios";
+import {BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
 
@@ -12,6 +13,7 @@ const Signup=() =>{
     const [first_name,setFirst_name] = useState('')
     const [age,setAge] = useState(0)
     const [username,setUsername] = useState('')
+    const [image,setImage] = useState('')
     const [description,setDescription] = useState('')
     
     async function handleSubmit(event) {
@@ -24,14 +26,21 @@ const Signup=() =>{
         first_name:first_name,
         age:age,
         username:username,
-        description:description
+        description:description,
+        image:image
     }).then(response => {
       if (response.data.status === "created") {
         navigate("../login")
+        console.log(response.data.status)
+      }
+      else{
+        alert("invalid credentials1")
       }
   }).catch(error => {
     console.log("registration error", error);
+    // alert("Invalid Credentials")
   });
+  event.preventDefault()
 }
 
     return (
@@ -46,26 +55,30 @@ const Signup=() =>{
                     <div className="row">
                       <div className="col-md-6 mb-4">
                         <div className="form-outline">
-                          <input onChange={(e) => setFirst_name(e.target.value)} type="text" id="form3Example1" className="form-control" placeholder="First name" />
+                          <input required onChange={(e) => setFirst_name(e.target.value)} type="text" id="form3Example1" className="form-control" placeholder="First name" />
                         </div>
                       </div>
                     </div>
       
                     <div className="form-outline mb-4">
-                      <input onChange={(e) => setAge(e.target.value)} type="number" id="form3Example3" className="form-control" placeholder="Age"/>
+                      <input required onChange={(e) => setAge(e.target.value)} type="number" id="form3Example3" className="form-control" placeholder="Age"/>
                     </div>
       
                     <div className="form-outline mb-4">
-                      <input onChange={(e) => setUsername(e.target.value)} type="text" id="form3Example3" className="form-control" placeholder="Pick a username"/>
+                      <input required onChange={(e) => setUsername(e.target.value)} type="text" id="form3Example3" className="form-control" placeholder="Pick a username"/>
                     </div>
       
                     <div className="form-outline mb-4">
-                      <input onChange={(e) => setEmail(e.target.value)} type="email" id="form3Example3" className="form-control" placeholder="Email address"/>
+                      <input required onChange={(e) => setEmail(e.target.value)} type="email" id="form3Example3" className="form-control" placeholder="Email address"/>
                     </div>
       
                     
                     <div className="form-outline mb-4">
-                      <input onChange={(e) => setPassword(e.target.value)} type="password" id="form3Example4" className="form-control" placeholder="Password"/>
+                      <input required onChange={(e) => setPassword(e.target.value)} type="password" id="form3Example4" className="form-control" placeholder="Password"/>
+                    </div>
+
+                    <div className="form-outline mb-4">
+                      <input onChange={(e) => setImage(e.target.value)} type="string" id="form3Example4" className="form-control" placeholder="insert image url"/>
                     </div>
       
                     <div className="form-outline mb-4">
@@ -75,6 +88,7 @@ const Signup=() =>{
                     <button type="submit" className="btn btn-primary btn-block mb-4">
                       Sign up
                     </button>
+                    <p>Already a user?<a class="text-black-50 fw-bold" href="/login"> Login</a></p>
                   </form>
                 </div>
               </div>

@@ -1,7 +1,7 @@
 img {
     width: 90%;
     height: 95%;
-    border-radius: 1000px;
+    /* border-radius: 1000px; */
   }
   
   .bg-black {
@@ -15,6 +15,21 @@ img {
   .blog-list-user{
     max-width: 80%;
     margin: 20px auto;
+  }
+
+  .icon{
+    width: 40px;
+    margin: 20px;
+  }
+
+  .profile-photo{
+    width: 300px;
+    height: 300px;
+  }
+
+  .edit-button{
+    margin-left: 120px;
+    margin-top: 30px;
   }
   
   @media (min-width: 991px) and (max-width:1200px) {

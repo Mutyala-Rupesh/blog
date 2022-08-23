@@ -3,5 +3,5 @@ class Blog < ApplicationRecord
     :user,
     class_name: 'User',
     foreign_key: 'authorID',
-    inverse_of: :blogs)
+)
 end

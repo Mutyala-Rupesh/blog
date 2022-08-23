@@ -25,6 +25,9 @@ function BlogList(props){
 	},[]);
 
 
+
+
+
     const getBlogsbyuser = async () => {
 		const url = "http://127.0.0.1:3000/user/bloglist/rupesh";
 		const response = await fetch(url);
@@ -38,7 +41,11 @@ function BlogList(props){
 
     useEffect(() => {
 		getBlogsbyuser();
+		// LongText();
 	},[]);
+
+
+
 
 
 
@@ -50,12 +57,15 @@ function BlogList(props){
                         <p className="title">Title: {blog.title}</p>   
                     </div>
                     {/* <hr /> */}
-                    <div className='des-div'>
-                        <p className='des'>{blog.blog_d}</p>
+					<div className='des-div'>
+                        <p className='short_des'>{blog.short_des}  ...</p>
                     </div>
+                    {/* <div className='des-div'>
+                        <p className='des'>{blog.blog_d}</p>
+                    </div> */}
                     <div className='blog-item-footer'>
-                        <p className="author_name">author_name: {blog.authorID}</p>
-                        <p>Posted:{blog.created_at}</p>
+                        <p className="author_name">Author Name: {blog.authorID} </p>
+                        <p>Posted: {(blog.created_at).slice(0,10)}</p>
                         {/* <div className='button-div'><Link to={`/edit/${blog.id}`}><button className='button' variant="primary">Edit</button></Link></div> */}
                         <div className='button-div'><Link to={`/shows/${blog.id}`}><button className='button' variant="primary">More</button></Link></div>
                     </div>

@@ -1,7 +1,7 @@
 .blog-item{
     width: 100%;
-    height: 200px;
-    background-color: #212529;
+    /* height: 300px; */
+    background-color: #25253B;
     margin: 50px;
     border-radius: 15px;
     color: white;
@@ -16,6 +16,8 @@
 .title{
    margin:40px auto;
    height: 10px;
+   color: rgb(249, 147, 147);
+   font-size: larger;
    /* color: red; */
 }
 
@@ -23,11 +25,13 @@
     margin-left: 10px;
 }
 
-.des{
-    text-align: center;
+.short_des{
+    /* text-align: center; */
     word-wrap: break-word;
-    color: rgb(250, 181, 181);
+    
     font-size: medium;
+    width: 90%;
+    margin: 10px auto;
 }
 
 
@@ -39,10 +43,16 @@
 }
 
 .des-div{
-    height: 120px;
+    height: 160px;
 }
 
-.button{
+.button-div{
     border: none;
     border-radius: 10px;
+    margin-right: 20px;
+}
+
+.blog-item-content{
+    max-width: 90%;
+    margin: 10px auto;
 }

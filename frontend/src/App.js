@@ -7,14 +7,14 @@ import { useState } from 'react';
 import EditBlog from './Components/EditBlog';
 import { useParams } from 'react-router-dom';
 
-function App() {
+function App(props) {
   let {username} = useParams();
   const [add,setAdd] = useState(false)
   const [editID,setEditId] = useState('')
   return (
     <div className="App">
       <div>
-        <Navbar/>
+        <Navbar username={username}/>
       </div>
       <div className='bloglist'>
         <BlogList setEditId={setEditId} setAdd={setAdd}/>

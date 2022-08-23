@@ -3,8 +3,9 @@ import './Login.css';
 import axios from "axios";
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import Navbar from "./Navbar";
 
-const Login=()=>{
+const Login=(props)=>{
   let navigate=useNavigate();
   const [email,setEmail] = useState('')
   const [password,setPassword] = useState('')
@@ -22,8 +23,11 @@ const Login=()=>{
       )
       .then(response => {
         if (response.data.logged_in) {
-          console.log("logeed in")
+          console.log("logged in")
           navigate(`../${response.data.username.username}`)
+        }
+        else{
+          alert("Invalid Credentials Error")
         }
       })
       .catch(error => {
@@ -32,6 +36,7 @@ const Login=()=>{
     event.preventDefault();
   }
     return (
+      <div>
       <section className="text-center text-lg-start">
         <div className="container py-4">
           <div className="row g-0 align-items-center">
@@ -68,6 +73,7 @@ const Login=()=>{
           </div>
         </div>
       </section>
+      </div>
         );
 };
   
